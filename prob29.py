@@ -1,8 +1,10 @@
+# Initial input sollection section
 initial_input = input('initial state: ');
 pw_11 = int(input());
 pw_1000 = int(input());
 input_arr = [];
 
+# Collects additional input until input of 0
 get_input = True;
 while get_input:
     new_input = input();
@@ -12,6 +14,7 @@ while get_input:
         input_arr.append(new_input);
 
 # Function to compute the value of a string for password
+# Computed by adding the indexes of all characters in a string of character '#'
 def compute_password(str, fval):
     sum = 0;
     for i in range(0, len(str)):
@@ -54,7 +57,6 @@ for x in range(1001):
     proc_input = "";
     for i in temp_arr:
         proc_input += i;
-    #print(proc_input + ' '  + str(x) + ' ' + str(proc_input.find('#')));
 
     if proc_input.find(last_input) != -1:
         dif = 50000000 - (x + 1);
